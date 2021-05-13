@@ -265,7 +265,7 @@ class _MenuLayoutDelegate extends MultiChildLayoutDelegate {
     bool isTop = false;
     if (anchorBottomY + verticalMargin + arrowSize.height + contentSize.height >
         size.height) {
-      isTop = true;
+      isTop = anchorTopY > size.height - anchorBottomY;
     }
     if (anchorCenterX - contentSize.width / 2 < 0) {
       menuPosition = isTop ? _MenuPosition.topLeft : _MenuPosition.bottomLeft;
